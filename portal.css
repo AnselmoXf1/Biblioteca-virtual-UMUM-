@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.topo {
+    background-color: #b30000; /* vermelho UMUM */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.perfil {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.foto {
+    text-align: center;
+    margin-right: 40px;
+}
+
+.foto img {
+    border-radius: 50%;
+    border: 4px solid #b30000;
+}
+
+.btn-upload {
+    margin-top: 10px;
+    background-color: #b30000;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-upload:hover {
+    background-color: #8a0000;
+}
+
+.info {
+    max-width: 400px;
+}
+
+.info h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.info p {
+    margin: 8px 0;
+    color: #444;
+}
+
+.btn-editar {
+    margin-top: 15px;
+    background-color: #b30000;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-editar:hover {
+    background-color: #8a0000;
+}
+
+.secao-dados {
+    background-color: white;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.secao-dados h3 {
+    margin-top: 0;
+    color: #b30000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    background-color: #b30000;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #8a0000;
+}

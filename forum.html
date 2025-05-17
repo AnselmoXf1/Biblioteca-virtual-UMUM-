@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Fórum do Estudante - UMUM</title>
+    <link rel="stylesheet" href="forum.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- Ícones -->
+</head>
+<body>
+    <header class="forum-header">
+        <h1>Fórum do Estudante - UMUM</h1>
+        <p>Partilhe ideias, PDFs, slides e livros com os colegas.</p>
+    </header>
+
+    <main class="forum-container">
+        <!-- Formulário de postagem -->
+        <section class="post-section">
+            <h2>Nova Publicação</h2>
+            <form id="postForm">
+                <input type="text" id="studentName" placeholder="Seu nome" required>
+                <textarea id="message" placeholder="Escreva sua mensagem..." required></textarea>
+
+                <label for="fileUpload">Anexar ficheiro (PDF, Slide, etc):</label>
+                <input type="file" id="fileUpload" accept=".pdf,.ppt,.pptx,.doc,.docx">
+
+                <button type="submit">Publicar</button>
+            </form>
+        </section>
+
+        <!-- Lista de publicações -->
+        <section class="messages-section">
+            <h2>Publicações Recentes</h2>
+            <div id="postsContainer"></div>
+        </section>
+    </main>
+
+    <footer class="forum-footer">
+        <p>Universidade Metodista Unida de Moçambique - © 2025</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('postForm');
+        const postsContainer = document.getElementById('postsContainer');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('studentName').value;
+            const message = document.getElementById('message').value;
+            const file = document.getElementById('fileUpload').files[0];
+
+            const postDiv = document.createElement('div');
+            postDiv.classList.add('post');
+
+            const nameElem = document.createElement('h3');
+            nameElem.textContent = name;
+
+            const messageElem = document.createElement('p');
+            messageElem.textContent = message;
+
+            postDiv.appendChild(nameElem);
+            postDiv.appendChild(messageElem);
+
+            if (file) {
+                const fileLink = document.createElement('a');
+                fileLink.textContent = ` ${file.name}`;
+                fileLink.href = URL.createObjectURL(file);
+                fileLink.download = file.name;
+                fileLink.classList.add('file-download');
+
+                const icon = document.createElement('i');
+                icon.className = "fas fa-download";
+                fileLink.prepend(icon);
+
+                postDiv.appendChild(fileLink);
+            }
+
+            postsContainer.prepend(postDiv);
+
+            form.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteca Digital - UMUM</title>
+  <link rel="stylesheet" href="biblio.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>KUMEKA - UMUM</h1>
+  </header>
+
+  <section class="filtros">
+    <label for="curso">Escolha o seu curso:</label>
+    <select id="curso">
+      <option value="">-- Selecione --</option>
+      <option value="engenharia Informatica">Engenharia Informática</option>
+      <option value="teologia">Teologia</option>
+      <option value="gestao empresarial">Gestão Empresarial</option>
+      <option value="gestao hospitalar">Gestão Hospitalar</option>
+      <option value="psicologia">Psicologia</option>
+      <option value="filosofia">Filosofia</option>
+      <option value="Agropecuaria">Agropecuária</option>
+    </select>
+
+    <input type="text" id="pesquisa" placeholder="Pesquisar livro...">
+  </section>
+
+  <section id="livros-container" class="livros-container">
+    <!-- Livros serão carregados dinamicamente pelo JavaScript -->
+  </section>
+
+  <script src="biblio.js"></script>
+</body>
+</html>

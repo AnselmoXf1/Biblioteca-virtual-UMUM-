@@ -1,0 +1,152 @@
+/* ---------- Reset básico ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Paleta de cores ---------- */
+:root {
+    --azul-umum: #002c5f;
+    --cinza-claro: #f4f4f4;
+    --cinza-borda: #d9d9d9;
+    --branco: #ffffff;
+    --texto: #333333;
+    --vermelho-botao: #e22012;
+    --vermelho-hover: #c91c0f;
+}
+
+/* ---------- Corpo ---------- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--texto);
+    line-height: 1.6;
+    padding: 30px 15px;
+}
+
+/* ---------- Container principal ---------- */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    background: var(--branco);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- Bloco imagem + texto ---------- */
+.image-text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.image-box {
+    flex: 1 1 350px;          /* cresce / encolhe / base */
+    min-width: 280px;
+}
+
+.contact-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.contact-info {
+    flex: 1 1 260px;
+    min-width: 250px;
+}
+
+.contact-info h2 {
+    color: var(--azul-umum);
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+}
+
+/* ---------- Formulário ---------- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 1 260px;
+    min-width: 230px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+label span {
+    color: var(--vermelho-botao);
+}
+
+input,
+select,
+textarea {
+    padding: 10px 14px;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: rgb(104, 19, 19);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ---------- Botão enviar ---------- */
+button[type="submit"] {
+    align-self: flex-start;
+    background-color: var(--vermelho-botao);
+    color: var(--branco);
+    border: none;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--vermelho-hover);
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 640px) {
+    .image-text {
+        flex-direction: column;
+    }
+    .contact-info {
+        order: -1;                 /* texto sobe, imagem desce, opcional */
+    }
+}
+h1{
+    background-color: #a31409;
+    text-align: center;
+}

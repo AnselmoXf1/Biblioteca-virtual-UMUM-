@@ -1,0 +1,74 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cores principais */
+:root {
+    --azul-umum: #8b1c1c;
+    --cinza-claro: #f4f4f4;
+    --branco: #ffffff;
+    --texto: #333;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--texto);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgb(134, 19, 19);
+    color: var(--branco);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* Títulos */
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: rgb(210, 16, 16);
+}
+
+/* Seções */
+section {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Blocos dos reitores */
+.reitor {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.reitor img {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    background-color: rgb(195, 13, 13);
+    color: var(--branco);
+    border-radius: 8px;
+}
